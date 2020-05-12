@@ -1,7 +1,7 @@
 $(window).on("load", function() {
     "use strict";
 
-    
+
 
     //  ============= POST PROJECT POPUP FUNCTION =========
 
@@ -50,7 +50,7 @@ $(window).on("load", function() {
         $("#"+tab_id).addClass('current animated fadeIn');
         return false;
     });
-    
+
     //  ============= SIGNIN SWITCH TAB FUNCTIONALITY =========
 
     $('.tab-feed ul li').on("click", function(){
@@ -272,7 +272,7 @@ $(window).on("load", function() {
     });
 
 
-    //  ============== ChatBox ============== 
+    //  ============== ChatBox ==============
 
 
     $(".chat-mg").on("click", function(){
@@ -322,7 +322,7 @@ $(".user-info").on("click", function(){$("#users").hide();
         $(".user-account-settingss").hide();
         $(this).next("#notification").toggle();
     });
-    
+
 	*/
 	$( ".user-info" ).click(function() {
   $( ".user-account-settingss" ).slideToggle( "fast");
@@ -330,7 +330,7 @@ $(".user-info").on("click", function(){$("#users").hide();
 	  $("#notification").not($(this).next("#notification")).slideUp();
     // Animation complete.
   });
- 
+
 
     //  ============= FORUM LINKS MOBILE MENU FUNCTION =========
 
@@ -477,7 +477,7 @@ $(document).ready(function() {
         $(".wrapper").removeClass("overlay");
         return false;
     });
-    
+
 
 
     //  ============= EXPLORE CHANGE FUNCTION =========
@@ -492,5 +492,28 @@ $(document).ready(function() {
         $(".wrapper").removeClass("overlay");
         return false;
     });
+
+
+
+    //  ============= DISCLAIMER FUNCTION =========
+
+    $(".disclaimer-open").on("click", function(){
+        $("#disclaimer-box").addClass("open");
+        $(".wrapper").addClass("overlay");
+        return false;
+    });
+    $(".close-box, .close-disclaimer").on("click", function(){
+        $("#disclaimer-box").removeClass("open");
+        $(".wrapper").removeClass("overlay");
+        return false;
+    });
+
+
+    $(".close-box-btn").on("click", function(){
+        $("#disclaimer-box").removeClass("open");
+        $(".wrapper").removeClass("overlay");
+        return false;
+    });
+
 });
 

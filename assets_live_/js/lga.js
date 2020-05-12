@@ -10,7 +10,7 @@
       el.setAttribute(key, attrs[key]);
     }
   };
-
+//
   const toggleLGA = target => {
     let state = target.value,                                                         // Get value of state
       selectLGAOption = ["Select LGA..."],                                            // Define this once so as not to repeat it multiple times
@@ -31,7 +31,7 @@
           "Ukwa East",
           "Ukwa West",
           "Umuahia North",
-          "muahia South",
+          "Umuahia South",
           "Umu Nneochi"
         ],
         Adamawa: [
@@ -57,7 +57,7 @@
           "Yola North",
           "Yola South"
         ],
-        AkwaIbom: [
+        'Akwa Ibom': [
           "Abak",
           "Eastern Obolo",
           "Eket",
@@ -114,7 +114,7 @@
           "Oyi"
         ],
 
-        Anambra: [
+    /*    Anambra: [
           "Aguata",
           "Anambra East",
           "Anambra West",
@@ -136,7 +136,7 @@
           "Orumba North",
           "Orumba South",
           "Oyi"
-        ],
+        ],*/
         Bauchi: [
           "Alkaleri",
           "Bauchi",
@@ -224,6 +224,7 @@
           "Nganzai",
           "Shani"
         ],
+        //
         "Cross River": [
           "Abi",
           "Akamkpa",
@@ -918,4 +919,4 @@
     });
   };
 
-  
+

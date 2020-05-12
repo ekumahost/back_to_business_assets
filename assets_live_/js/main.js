@@ -29,7 +29,7 @@ $('#selectUserType').hide();
         text = "Business";
     }
 
-
+//
    // document.getElementById("userType").innerHTML = text;
     $("#user_type_input").val(text);
 });

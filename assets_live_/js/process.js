@@ -116,16 +116,7 @@ $(".registerForm").on("submit", function(e) {
                 position: "topCenter"
             });
 
-        /*    if(result['data']['user_type'] === 'Business'){
-                // user not completed registration
-                window.location.href = $('#path_to_register_business').val();
-            }else{*/
-
                 window.location.href = $('#path_to_register_step_two').val();
-             //   window.location.href = $('#path_to_feeds').val();
-          //  }
-
-
         }else{
 
            iziToast.error({
@@ -216,76 +207,6 @@ $(".businessRegistrationForm").on("submit", function(e) {
     });
 
 });
-
-
-
-
-
-
-
-/*
-
-$(".campaignCreateForm").on("submit", function(e) {
-    e.preventDefault();
-    $('.campaignCreateButton').LoadingOverlay("show");
-
-    var post_path = $('.campaignCreateForm').attr('action');
-    $(this).LoadingOverlay("show");
-    var fd = new FormData();
-    var files = $('#banner_file')[0].files[0];
-    fd.append('banner_file', files);
-
-    var contents = $('.campaignCreateForm').serialize();
-
-    $.ajax({
-        url: post_path + '?'+contents,
-        type: 'post',
-        data: fd,
-        contentType: false,
-        processData: false,
-        success: function(result){
-
-            if(result['status'] === 'success'){
-                iziToast.success({
-                    title: 'OK',
-                    message: result['message'],
-                    position: "topCenter"
-
-                });
-
-            }else{
-                iziToast.error({
-                    title: 'Error',
-                    message: result['message'],
-                    position: "topCenter"
-
-                });
-
-            }
-
-            $('.campaignCreateButton').LoadingOverlay("hide");
-
-        },
-        error: function (e) {
-            console.log("ERROR : ", e);
-            $('.campaignCreateButton').LoadingOverlay("hide");
-            iziToast.error({
-                title: 'Error',
-                message: "Something is wrong, please, try again later..",
-                position: "topCenter"
-
-            });
-        }
-
-    });
-
-});
-*/
-
-
-
-
-
 
 $(".donateFundForm").on("submit", function(e) {
     e.preventDefault();
@@ -388,13 +309,6 @@ $(".donateMaterialForm").on("submit", function(e) {
 
 });
 
-
-
-
-
-
-
-
 $(".businessUploadLogoForm").on("submit", function(e) {
     e.preventDefault();
     $('.businessUploadLogoForm').LoadingOverlay("show");
@@ -442,7 +356,7 @@ $(".businessUploadLogoForm").on("submit", function(e) {
             $('.businessUploadLogoForm').LoadingOverlay("hide");
             iziToast.error({
                 title: 'Error',
-                message: "Something is wrong, please, try again later..",
+                message: "Something is wrong, make sure your image is not too large please, try again later..",
                 position: "topCenter"
 
             });
@@ -451,9 +365,6 @@ $(".businessUploadLogoForm").on("submit", function(e) {
     });
 
 });
-
-
-
 
 
 
@@ -491,7 +402,14 @@ $(".campaignCreateButton").on("click", function(e) {
 
                 });
 
-                location.reload();
+              if(result['message'] === 'Campaign published successfully'){
+
+                  window.location.href = $('#path_to_my_campaign').val();
+
+              }
+
+                $('.campaignCreateButton').LoadingOverlay("hide");
+
 
             }else{
                 iziToast.error({
@@ -511,7 +429,7 @@ $(".campaignCreateButton").on("click", function(e) {
             $('.campaignCreateButton').LoadingOverlay("hide");
             iziToast.error({
                 title: 'Error',
-                message: "Something is wrong, please, try again later..",
+                message: "Something is wrong, make sure your image is not too large please, try again later..",
                 position: "topCenter"
 
             });
@@ -608,7 +526,7 @@ $(".businessUploadBannerForm").on("submit", function(e) {
             $('.businessUploadBannerForm').LoadingOverlay("hide");
             iziToast.error({
                 title: 'Error',
-                message: "Something is wrong, please, try again later..",
+                message: "Something is wrong, make sure your image is not too large please, try again later..",
                 position: "topCenter"
 
             });
