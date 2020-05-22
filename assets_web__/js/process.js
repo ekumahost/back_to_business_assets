@@ -783,7 +783,8 @@ $(".updateCommunityDetailsButton").on("click", function(e) {
                     position: "topCenter"
 
                 });
-                location.reload();
+
+                window.location.href = 'https://backtobusiness.ng/' + $('#community_url_input').val();
                 $('.updateCommunityDetailsButton').LoadingOverlay("hide");
 
             }else{
